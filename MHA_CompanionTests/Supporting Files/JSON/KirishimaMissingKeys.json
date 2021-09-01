@@ -1,0 +1,42 @@
+{
+    "name": "Eijiro Kirishima",
+    "alias": "Sturdy Hero: Red Riot",
+    "affiliation": "U.A. High School",
+    "birthday": "October 16th",
+    "bloodtype": "O",
+    "description": "Eijiro Kirishima (切 (きり) 島 (しま) 鋭 (えい) 児 (じ) 郎 (ろう) , Kirishima Eijirō?), also known as the Sturdy Hero: Red Riot (剛健ヒーロー 烈 (レッ) 怒 (ド) 頼 (ライ) 雄 (オッ) 斗 (ト) , Gōken Hīrō Reddo Raiotto?), is a student in Class 1-A at U.A. High School, training to become a Pro Hero.\n",
+    "fightstyle": null,
+    "gender": "Male",
+    "Eye": "Red",
+    "hair": "Red (current, dyed)",
+    "height": "170 cm (5'7\")",
+    "kanji": "切 (きり) 島 (しま) 鋭 (えい) 児 (じ) 郎 (ろう) ",
+    "occupation": "Student",
+    "quirk": "Hardening",
+    "romaji": "Kirishima Eijirō",
+    "status": "Alive",
+    "teams": "Team Bakugo, Shie Hasseikai Raid Team",
+    "images": [
+        "https://storage.googleapis.com/my-hero-academia-api/Eijiro_Kirishima-1.jpg",
+        "https://storage.googleapis.com/my-hero-academia-api/Eijiro_Kirishima-2.jpg",
+        "https://storage.googleapis.com/my-hero-academia-api/Eijiro_Kirishima-3.jpg",
+        "https://storage.googleapis.com/my-hero-academia-api/Eijiro_Kirishima.jpg"
+    ],
+    "epithet": null,
+    "ages": [
+        {
+            "age": "15 ",
+            "when": "First Appearance"
+        },
+        {
+            "age": "16 ",
+            "when": "U.A. School Festival Arc"
+        }
+    ],
+    "family": [
+        {
+            "id": "#cite_note-auto-ed97ec10ba7285c7349874dc15e10677-0",
+            "name": "[1]"
+        }
+    ]
+}

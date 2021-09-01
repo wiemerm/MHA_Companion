@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -24,6 +24,11 @@
 		631DFF0826DFFB0D00E88664 /* CharacterEndpointsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631DFF0726DFFB0D00E88664 /* CharacterEndpointsTests.swift */; };
 		631DFF0A26E0017000E88664 /* ResultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631DFF0926E0017000E88664 /* ResultTests.swift */; };
 		631DFF0C26E0017B00E88664 /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631DFF0B26E0017B00E88664 /* Results.swift */; };
+		631DFF0E26E00DAC00E88664 /* MyHeroAcademiaAPIIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631DFF0D26E00DAC00E88664 /* MyHeroAcademiaAPIIntegrationTests.swift */; };
+		631DFF1026E00E2100E88664 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631DFF0F26E00E2100E88664 /* ApiClient.swift */; };
+		631DFF1A26E0149700E88664 /* CharactersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631DFF1926E0149700E88664 /* CharactersService.swift */; };
+		631DFF1C26E014A400E88664 /* CharactersServiceIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631DFF1B26E014A400E88664 /* CharactersServiceIntegrationTests.swift */; };
+		631DFF2026E0153F00E88664 /* Cuckoo in Frameworks */ = {isa = PBXBuildFile; productRef = 631DFF1F26E0153F00E88664 /* Cuckoo */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +63,10 @@
 		631DFF0726DFFB0D00E88664 /* CharacterEndpointsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterEndpointsTests.swift; sourceTree = "<group>"; };
 		631DFF0926E0017000E88664 /* ResultTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTests.swift; sourceTree = "<group>"; };
 		631DFF0B26E0017B00E88664 /* Results.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Results.swift; sourceTree = "<group>"; };
+		631DFF0D26E00DAC00E88664 /* MyHeroAcademiaAPIIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyHeroAcademiaAPIIntegrationTests.swift; sourceTree = "<group>"; };
+		631DFF0F26E00E2100E88664 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		631DFF1926E0149700E88664 /* CharactersService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersService.swift; sourceTree = "<group>"; };
+		631DFF1B26E014A400E88664 /* CharactersServiceIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersServiceIntegrationTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				631DFF2026E0153F00E88664 /* Cuckoo in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,13 +129,14 @@
 		631DFECE26DFD46C00E88664 /* MHA_CompanionTests */ = {
 			isa = PBXGroup;
 			children = (
+				631DFF1D26E014C000E88664 /* Supporting Files */,
 				631DFEFE26DFF30900E88664 /* AgeTests.swift */,
+				631DFF0726DFFB0D00E88664 /* CharacterEndpointsTests.swift */,
+				631DFF1B26E014A400E88664 /* CharactersServiceIntegrationTests.swift */,
 				631DFEF826DFD70200E88664 /* CharacterTests.swift */,
 				631DFEEB26DFD51D00E88664 /* CustomAssertions.swift */,
 				631DFF0026DFF31500E88664 /* FamilyMemberTests.swift */,
-				631DFED126DFD46C00E88664 /* Info.plist */,
-				631DFEF126DFD68700E88664 /* JSON */,
-				631DFF0726DFFB0D00E88664 /* CharacterEndpointsTests.swift */,
+				631DFF0D26E00DAC00E88664 /* MyHeroAcademiaAPIIntegrationTests.swift */,
 				631DFF0926E0017000E88664 /* ResultTests.swift */,
 			);
 			path = MHA_CompanionTests;
@@ -152,8 +163,8 @@
 		631DFEEA26DFD4FD00E88664 /* Objects */ = {
 			isa = PBXGroup;
 			children = (
-				631DFEED26DFD63D00E88664 /* Character.swift */,
 				631DFEFA26DFDFAC00E88664 /* Age.swift */,
+				631DFEED26DFD63D00E88664 /* Character.swift */,
 				631DFEFC26DFDFBD00E88664 /* FamilyMember.swift */,
 				631DFF0B26E0017B00E88664 /* Results.swift */,
 			);
@@ -172,9 +183,20 @@
 		631DFF0226DFF76A00E88664 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				631DFF0F26E00E2100E88664 /* ApiClient.swift */,
 				631DFF0526DFF79E00E88664 /* CharacterEndpoints.swift */,
+				631DFF1926E0149700E88664 /* CharactersService.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		631DFF1D26E014C000E88664 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				631DFEF126DFD68700E88664 /* JSON */,
+				631DFED126DFD46C00E88664 /* Info.plist */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,6 +223,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 631DFEE226DFD46C00E88664 /* Build configuration list for PBXNativeTarget "MHA_CompanionTests" */;
 			buildPhases = (
+				631DFF2126E0155800E88664 /* Cuckoo */,
 				631DFEC726DFD46C00E88664 /* Sources */,
 				631DFEC826DFD46C00E88664 /* Frameworks */,
 				631DFEC926DFD46C00E88664 /* Resources */,
@@ -211,6 +234,9 @@
 				631DFECD26DFD46C00E88664 /* PBXTargetDependency */,
 			);
 			name = MHA_CompanionTests;
+			packageProductDependencies = (
+				631DFF1F26E0153F00E88664 /* Cuckoo */,
+			);
 			productName = MHA_CompanionTests;
 			productReference = 631DFECB26DFD46C00E88664 /* MHA_CompanionTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -242,6 +268,9 @@
 				Base,
 			);
 			mainGroup = 631DFEB126DFD46A00E88664;
+			packageReferences = (
+				631DFF1E26E0153F00E88664 /* XCRemoteSwiftPackageReference "Cuckoo" */,
+			);
 			productRefGroup = 631DFEBB26DFD46A00E88664 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -273,6 +302,27 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		631DFF2126E0155800E88664 /* Cuckoo */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Cuckoo;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Define output file. Change \"${PROJECT_DIR}/${PROJECT_NAME}Tests\" to your test's root source folder, if it's not the default name.\nOUTPUT_FILE=\"./${PROJECT_NAME}Tests/GeneratedMocks.swift\"\necho \"Generated Mocks File = ${OUTPUT_FILE}\"\n\n# Define input directory. Change \"${PROJECT_DIR}/${PROJECT_NAME}\" to your project's root source folder, if it's not the default name.\nINPUT_DIR=\"./${PROJECT_NAME}\"\necho \"Mocks Input Directory = ${INPUT_DIR}\"\n\n# Generate mock files, include as many input files as you'd like to create mocks for.\n\"${PROJECT_DIR}/run\" --download generate --testable \"${PROJECT_NAME}\" \\\n--output \"${OUTPUT_FILE}\" \\\n${INPUT_DIR}/Networking/CharactersService.swift\n#\"${INPUT_DIR}/FileName1.swift\" \\\n#\"${INPUT_DIR}/FileName2.swift\" \\\n#\"${INPUT_DIR}/FileName3.swift\"\n# ... and so forth, the last line should never end with a backslash\n\n# After running once, locate `GeneratedMocks.swift` and drag it into your Xcode test target group.\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		631DFEB626DFD46A00E88664 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -280,10 +330,12 @@
 			files = (
 				631DFF0626DFF79E00E88664 /* CharacterEndpoints.swift in Sources */,
 				631DFEEE26DFD63D00E88664 /* Character.swift in Sources */,
+				631DFF1026E00E2100E88664 /* ApiClient.swift in Sources */,
 				631DFEFB26DFDFAC00E88664 /* Age.swift in Sources */,
 				631DFF0C26E0017B00E88664 /* Results.swift in Sources */,
 				631DFEC026DFD46A00E88664 /* ContentView.swift in Sources */,
 				631DFEBE26DFD46A00E88664 /* MHA_CompanionApp.swift in Sources */,
+				631DFF1A26E0149700E88664 /* CharactersService.swift in Sources */,
 				631DFEFD26DFDFBD00E88664 /* FamilyMember.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -295,9 +347,11 @@
 				631DFF0A26E0017000E88664 /* ResultTests.swift in Sources */,
 				631DFEFF26DFF30900E88664 /* AgeTests.swift in Sources */,
 				631DFEF926DFD70200E88664 /* CharacterTests.swift in Sources */,
+				631DFF1C26E014A400E88664 /* CharactersServiceIntegrationTests.swift in Sources */,
 				631DFF0826DFFB0D00E88664 /* CharacterEndpointsTests.swift in Sources */,
 				631DFEEC26DFD51D00E88664 /* CustomAssertions.swift in Sources */,
 				631DFF0126DFF31500E88664 /* FamilyMemberTests.swift in Sources */,
+				631DFF0E26E00DAC00E88664 /* MyHeroAcademiaAPIIntegrationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -479,7 +533,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2KLV3F3TB7;
-				INFOPLIST_FILE = MHA_CompanionTests/Info.plist;
+				INFOPLIST_FILE = "MHA_CompanionTests/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -501,7 +555,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2KLV3F3TB7;
-				INFOPLIST_FILE = MHA_CompanionTests/Info.plist;
+				INFOPLIST_FILE = "MHA_CompanionTests/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -547,6 +601,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		631DFF1E26E0153F00E88664 /* XCRemoteSwiftPackageReference "Cuckoo" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Brightify/Cuckoo";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		631DFF1F26E0153F00E88664 /* Cuckoo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 631DFF1E26E0153F00E88664 /* XCRemoteSwiftPackageReference "Cuckoo" */;
+			productName = Cuckoo;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 631DFEB226DFD46A00E88664 /* Project object */;
 }
