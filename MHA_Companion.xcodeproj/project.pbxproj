@@ -22,6 +22,8 @@
 		631DFF0126DFF31500E88664 /* FamilyMemberTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631DFF0026DFF31500E88664 /* FamilyMemberTests.swift */; };
 		631DFF0626DFF79E00E88664 /* CharacterEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631DFF0526DFF79E00E88664 /* CharacterEndpoints.swift */; };
 		631DFF0826DFFB0D00E88664 /* CharacterEndpointsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631DFF0726DFFB0D00E88664 /* CharacterEndpointsTests.swift */; };
+		631DFF0A26E0017000E88664 /* ResultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631DFF0926E0017000E88664 /* ResultTests.swift */; };
+		631DFF0C26E0017B00E88664 /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631DFF0B26E0017B00E88664 /* Results.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,8 @@
 		631DFF0026DFF31500E88664 /* FamilyMemberTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyMemberTests.swift; sourceTree = "<group>"; };
 		631DFF0526DFF79E00E88664 /* CharacterEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterEndpoints.swift; sourceTree = "<group>"; };
 		631DFF0726DFFB0D00E88664 /* CharacterEndpointsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterEndpointsTests.swift; sourceTree = "<group>"; };
+		631DFF0926E0017000E88664 /* ResultTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTests.swift; sourceTree = "<group>"; };
+		631DFF0B26E0017B00E88664 /* Results.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Results.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +126,7 @@
 				631DFED126DFD46C00E88664 /* Info.plist */,
 				631DFEF126DFD68700E88664 /* JSON */,
 				631DFF0726DFFB0D00E88664 /* CharacterEndpointsTests.swift */,
+				631DFF0926E0017000E88664 /* ResultTests.swift */,
 			);
 			path = MHA_CompanionTests;
 			sourceTree = "<group>";
@@ -150,6 +155,7 @@
 				631DFEED26DFD63D00E88664 /* Character.swift */,
 				631DFEFA26DFDFAC00E88664 /* Age.swift */,
 				631DFEFC26DFDFBD00E88664 /* FamilyMember.swift */,
+				631DFF0B26E0017B00E88664 /* Results.swift */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -275,6 +281,7 @@
 				631DFF0626DFF79E00E88664 /* CharacterEndpoints.swift in Sources */,
 				631DFEEE26DFD63D00E88664 /* Character.swift in Sources */,
 				631DFEFB26DFDFAC00E88664 /* Age.swift in Sources */,
+				631DFF0C26E0017B00E88664 /* Results.swift in Sources */,
 				631DFEC026DFD46A00E88664 /* ContentView.swift in Sources */,
 				631DFEBE26DFD46A00E88664 /* MHA_CompanionApp.swift in Sources */,
 				631DFEFD26DFDFBD00E88664 /* FamilyMember.swift in Sources */,
@@ -285,6 +292,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				631DFF0A26E0017000E88664 /* ResultTests.swift in Sources */,
 				631DFEFF26DFF30900E88664 /* AgeTests.swift in Sources */,
 				631DFEF926DFD70200E88664 /* CharacterTests.swift in Sources */,
 				631DFF0826DFFB0D00E88664 /* CharacterEndpointsTests.swift in Sources */,
