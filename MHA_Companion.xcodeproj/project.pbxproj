@@ -18,6 +18,8 @@
 		631DFEF926DFD70200E88664 /* CharacterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631DFEF826DFD70200E88664 /* CharacterTests.swift */; };
 		631DFEFB26DFDFAC00E88664 /* Age.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631DFEFA26DFDFAC00E88664 /* Age.swift */; };
 		631DFEFD26DFDFBD00E88664 /* FamilyMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631DFEFC26DFDFBD00E88664 /* FamilyMember.swift */; };
+		631DFEFF26DFF30900E88664 /* AgeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631DFEFE26DFF30900E88664 /* AgeTests.swift */; };
+		631DFF0126DFF31500E88664 /* FamilyMemberTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631DFF0026DFF31500E88664 /* FamilyMemberTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,8 @@
 		631DFEF826DFD70200E88664 /* CharacterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterTests.swift; sourceTree = "<group>"; };
 		631DFEFA26DFDFAC00E88664 /* Age.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Age.swift; sourceTree = "<group>"; };
 		631DFEFC26DFDFBD00E88664 /* FamilyMember.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyMember.swift; sourceTree = "<group>"; };
+		631DFEFE26DFF30900E88664 /* AgeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgeTests.swift; sourceTree = "<group>"; };
+		631DFF0026DFF31500E88664 /* FamilyMemberTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyMemberTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,10 +110,12 @@
 		631DFECE26DFD46C00E88664 /* MHA_CompanionTests */ = {
 			isa = PBXGroup;
 			children = (
-				631DFEF126DFD68700E88664 /* JSON */,
-				631DFEEB26DFD51D00E88664 /* CustomAssertions.swift */,
-				631DFED126DFD46C00E88664 /* Info.plist */,
+				631DFEFE26DFF30900E88664 /* AgeTests.swift */,
 				631DFEF826DFD70200E88664 /* CharacterTests.swift */,
+				631DFEEB26DFD51D00E88664 /* CustomAssertions.swift */,
+				631DFF0026DFF31500E88664 /* FamilyMemberTests.swift */,
+				631DFED126DFD46C00E88664 /* Info.plist */,
+				631DFEF126DFD68700E88664 /* JSON */,
 			);
 			path = MHA_CompanionTests;
 			sourceTree = "<group>";
@@ -264,8 +270,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				631DFEFF26DFF30900E88664 /* AgeTests.swift in Sources */,
 				631DFEF926DFD70200E88664 /* CharacterTests.swift in Sources */,
 				631DFEEC26DFD51D00E88664 /* CustomAssertions.swift in Sources */,
+				631DFF0126DFF31500E88664 /* FamilyMemberTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

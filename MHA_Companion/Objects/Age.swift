@@ -8,5 +8,10 @@
 import Foundation
 
 struct Age: Codable {
-    
+    private let age: String
+    var years: Int {
+        Int(age.trimmingCharacters(in: .whitespacesAndNewlines)) ?? 0
+    }
+    let when: String
+
 }

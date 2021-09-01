@@ -8,5 +8,6 @@
 import Foundation
 
 struct FamilyMember: Codable {
-    
+    let id: String
+    let name: String
 }
