@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Character: Codable {
+struct Character: Codable, Identifiable {
     let id: String
     let name: String?
     let alias: String?
