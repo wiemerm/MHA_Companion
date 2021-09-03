@@ -26,9 +26,10 @@
 		631DFF0C26E0017B00E88664 /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631DFF0B26E0017B00E88664 /* Results.swift */; };
 		631DFF0E26E00DAC00E88664 /* MyHeroAcademiaAPIIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631DFF0D26E00DAC00E88664 /* MyHeroAcademiaAPIIntegrationTests.swift */; };
 		631DFF1026E00E2100E88664 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631DFF0F26E00E2100E88664 /* ApiClient.swift */; };
-		631DFF1A26E0149700E88664 /* CharactersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631DFF1926E0149700E88664 /* CharactersService.swift */; };
-		631DFF1C26E014A400E88664 /* CharactersServiceIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631DFF1B26E014A400E88664 /* CharactersServiceIntegrationTests.swift */; };
+		631DFF1A26E0149700E88664 /* CharacterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631DFF1926E0149700E88664 /* CharacterService.swift */; };
 		631DFF2026E0153F00E88664 /* Cuckoo in Frameworks */ = {isa = PBXBuildFile; productRef = 631DFF1F26E0153F00E88664 /* Cuckoo */; };
+		63CA4CFD26E122F200178A55 /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CA4CFC26E122F200178A55 /* TestHelpers.swift */; };
+		63CA4D0126E1294300178A55 /* GeneratedMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CA4D0026E1294300178A55 /* GeneratedMocks.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,8 +66,9 @@
 		631DFF0B26E0017B00E88664 /* Results.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Results.swift; sourceTree = "<group>"; };
 		631DFF0D26E00DAC00E88664 /* MyHeroAcademiaAPIIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyHeroAcademiaAPIIntegrationTests.swift; sourceTree = "<group>"; };
 		631DFF0F26E00E2100E88664 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
-		631DFF1926E0149700E88664 /* CharactersService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersService.swift; sourceTree = "<group>"; };
-		631DFF1B26E014A400E88664 /* CharactersServiceIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersServiceIntegrationTests.swift; sourceTree = "<group>"; };
+		631DFF1926E0149700E88664 /* CharacterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterService.swift; sourceTree = "<group>"; };
+		63CA4CFC26E122F200178A55 /* TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
+		63CA4D0026E1294300178A55 /* GeneratedMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GeneratedMocks.swift; path = MHA_CompanionTests/GeneratedMocks.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,15 +131,14 @@
 		631DFECE26DFD46C00E88664 /* MHA_CompanionTests */ = {
 			isa = PBXGroup;
 			children = (
-				631DFF1D26E014C000E88664 /* Supporting Files */,
 				631DFEFE26DFF30900E88664 /* AgeTests.swift */,
 				631DFF0726DFFB0D00E88664 /* CharacterEndpointsTests.swift */,
-				631DFF1B26E014A400E88664 /* CharactersServiceIntegrationTests.swift */,
 				631DFEF826DFD70200E88664 /* CharacterTests.swift */,
 				631DFEEB26DFD51D00E88664 /* CustomAssertions.swift */,
 				631DFF0026DFF31500E88664 /* FamilyMemberTests.swift */,
 				631DFF0D26E00DAC00E88664 /* MyHeroAcademiaAPIIntegrationTests.swift */,
 				631DFF0926E0017000E88664 /* ResultTests.swift */,
+				631DFF1D26E014C000E88664 /* Supporting Files */,
 			);
 			path = MHA_CompanionTests;
 			sourceTree = "<group>";
@@ -185,7 +186,7 @@
 			children = (
 				631DFF0F26E00E2100E88664 /* ApiClient.swift */,
 				631DFF0526DFF79E00E88664 /* CharacterEndpoints.swift */,
-				631DFF1926E0149700E88664 /* CharactersService.swift */,
+				631DFF1926E0149700E88664 /* CharacterService.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -193,8 +194,10 @@
 		631DFF1D26E014C000E88664 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				631DFEF126DFD68700E88664 /* JSON */,
 				631DFED126DFD46C00E88664 /* Info.plist */,
+				63CA4D0026E1294300178A55 /* GeneratedMocks.swift */,
+				63CA4CFC26E122F200178A55 /* TestHelpers.swift */,
+				631DFEF126DFD68700E88664 /* JSON */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -319,7 +322,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Define output file. Change \"${PROJECT_DIR}/${PROJECT_NAME}Tests\" to your test's root source folder, if it's not the default name.\nOUTPUT_FILE=\"./${PROJECT_NAME}Tests/GeneratedMocks.swift\"\necho \"Generated Mocks File = ${OUTPUT_FILE}\"\n\n# Define input directory. Change \"${PROJECT_DIR}/${PROJECT_NAME}\" to your project's root source folder, if it's not the default name.\nINPUT_DIR=\"./${PROJECT_NAME}\"\necho \"Mocks Input Directory = ${INPUT_DIR}\"\n\n# Generate mock files, include as many input files as you'd like to create mocks for.\n\"${PROJECT_DIR}/run\" --download generate --testable \"${PROJECT_NAME}\" \\\n--output \"${OUTPUT_FILE}\" \\\n${INPUT_DIR}/Networking/CharactersService.swift\n#\"${INPUT_DIR}/FileName1.swift\" \\\n#\"${INPUT_DIR}/FileName2.swift\" \\\n#\"${INPUT_DIR}/FileName3.swift\"\n# ... and so forth, the last line should never end with a backslash\n\n# After running once, locate `GeneratedMocks.swift` and drag it into your Xcode test target group.\n";
+			shellScript = "# Define output file. Change \"${PROJECT_DIR}/${PROJECT_NAME}Tests\" to your test's root source folder, if it's not the default name.\nOUTPUT_FILE=\"./${PROJECT_NAME}Tests/GeneratedMocks.swift\"\necho \"Generated Mocks File = ${OUTPUT_FILE}\"\n\n# Define input directory. Change \"${PROJECT_DIR}/${PROJECT_NAME}\" to your project's root source folder, if it's not the default name.\nINPUT_DIR=\"./${PROJECT_NAME}\"\necho \"Mocks Input Directory = ${INPUT_DIR}\"\n\n# Generate mock files, include as many input files as you'd like to create mocks for.\n\"${PROJECT_DIR}/run\" --download generate --testable \"${PROJECT_NAME}\" \\\n--output \"${OUTPUT_FILE}\" \\\n${INPUT_DIR}/Networking/CharactersService.swift \\\n${INPUT_DIR}/Networking/ApiClient.swift\n#\"${INPUT_DIR}/FileName1.swift\" \\\n#\"${INPUT_DIR}/FileName2.swift\" \\\n#\"${INPUT_DIR}/FileName3.swift\"\n# ... and so forth, the last line should never end with a backslash\n\n# After running once, locate `GeneratedMocks.swift` and drag it into your Xcode test target group.\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -335,7 +338,7 @@
 				631DFF0C26E0017B00E88664 /* Results.swift in Sources */,
 				631DFEC026DFD46A00E88664 /* ContentView.swift in Sources */,
 				631DFEBE26DFD46A00E88664 /* MHA_CompanionApp.swift in Sources */,
-				631DFF1A26E0149700E88664 /* CharactersService.swift in Sources */,
+				631DFF1A26E0149700E88664 /* CharacterService.swift in Sources */,
 				631DFEFD26DFDFBD00E88664 /* FamilyMember.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -347,11 +350,12 @@
 				631DFF0A26E0017000E88664 /* ResultTests.swift in Sources */,
 				631DFEFF26DFF30900E88664 /* AgeTests.swift in Sources */,
 				631DFEF926DFD70200E88664 /* CharacterTests.swift in Sources */,
-				631DFF1C26E014A400E88664 /* CharactersServiceIntegrationTests.swift in Sources */,
 				631DFF0826DFFB0D00E88664 /* CharacterEndpointsTests.swift in Sources */,
 				631DFEEC26DFD51D00E88664 /* CustomAssertions.swift in Sources */,
 				631DFF0126DFF31500E88664 /* FamilyMemberTests.swift in Sources */,
 				631DFF0E26E00DAC00E88664 /* MyHeroAcademiaAPIIntegrationTests.swift in Sources */,
+				63CA4CFD26E122F200178A55 /* TestHelpers.swift in Sources */,
+				63CA4D0126E1294300178A55 /* GeneratedMocks.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
