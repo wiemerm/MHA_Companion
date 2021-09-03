@@ -13,7 +13,6 @@ struct Results: Decodable {
     let pages: Int
     let results: [Character]
 
-
     enum CodingKeys: String, CodingKey {
         case info, result
     }

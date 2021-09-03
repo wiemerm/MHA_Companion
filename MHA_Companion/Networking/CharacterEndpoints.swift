@@ -11,7 +11,7 @@ enum CharacterEndpoint {
     case all
     case page(_ page: Int)
     case character(id: String)
-    case filter(by: Filter, value: String)
+    case filter(_ filter: Filter, value: String)
 
     private var scheme: String {
         "https"
@@ -46,7 +46,6 @@ enum CharacterEndpoint {
         return components.url
     }
 }
-
 
 enum Filter: String {
     case name

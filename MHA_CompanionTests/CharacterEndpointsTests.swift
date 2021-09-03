@@ -28,31 +28,31 @@ class CharacterEndpointsTests: XCTestCase {
     }
 
     func testCanBuildURL_filteringByName() {
-        let url = CharacterEndpoint.filter(by: .name, value: "Toshinori Yagi").url
+        let url = CharacterEndpoint.filter(.name, value: "Toshinori Yagi").url
         XCTAssertNotNil(url)
         XCTAssertEqual(url?.absoluteString, "https://myheroacademiaapi.com/api/character?name=Toshinori%20Yagi")
     }
 
     func testCanBuildURL_filteringByAlias() {
-        let url = CharacterEndpoint.filter(by: .alias, value: "All Might").url
+        let url = CharacterEndpoint.filter(.alias, value: "All Might").url
         XCTAssertNotNil(url)
         XCTAssertEqual(url?.absoluteString, "https://myheroacademiaapi.com/api/character?alias=All%20Might")
     }
 
     func testCanBuildURL_filteringByQuirk() {
-        let url = CharacterEndpoint.filter(by: .quirk, value: "hardening").url
+        let url = CharacterEndpoint.filter(.quirk, value: "hardening").url
         XCTAssertNotNil(url)
         XCTAssertEqual(url?.absoluteString, "https://myheroacademiaapi.com/api/character?quirk=hardening")
     }
 
     func testCanBuildURL_filteringByOccupation() {
-        let url = CharacterEndpoint.filter(by: .occupation, value: "student").url
+        let url = CharacterEndpoint.filter(.occupation, value: "student").url
         XCTAssertNotNil(url)
         XCTAssertEqual(url?.absoluteString, "https://myheroacademiaapi.com/api/character?occupation=student")
     }
 
     func testCanBuildURL_filteringByAffiliation() {
-        let url = CharacterEndpoint.filter(by: .affiliation, value: "U.A. High School").url
+        let url = CharacterEndpoint.filter(.affiliation, value: "U.A. High School").url
         XCTAssertNotNil(url)
         XCTAssertEqual(url?.absoluteString, "https://myheroacademiaapi.com/api/character?affiliation=U.A.%20High%20School")
 

@@ -30,7 +30,7 @@ struct CharacterList_Previews: PreviewProvider {
                                              description: nil,
                                              fightstyle: nil,
                                              gender: nil,
-                                             Eye: nil,
+                                             eye: nil,
                                              hair: nil,
                                              kanji: nil,
                                              occupation: nil,

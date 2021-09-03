@@ -51,7 +51,7 @@ class CharacterTests: XCTestCase {
         XCTAssertEqual(result?.description, "Izuku Midoriya (緑 (みどり) 谷 (や) 出 (いず) 久 (く) , Midoriya Izuku?), also known as Deku (デク, Deku?), is the primary protagonist of the My Hero Academia manga and anime series.\nThough born Quirkless, Izuku manages to catch the attention of the legendary hero All Might due to his innate heroism and strong sense of justice and has since become his close pupil as well as a student in Class 1-A at U.A. High School. All Might passed on his Quirk to Izuku, making him the ninth holder of One For All.\n")
         XCTAssertEqual(result?.fightstyle, "Shoot Style")
         XCTAssertEqual(result?.gender, "Male")
-        XCTAssertEqual(result?.Eye, "Green")
+        XCTAssertEqual(result?.eye, "Green")
         XCTAssertEqual(result?.hair, "Green")
         XCTAssertEqual(result?.kanji, "緑 (みどり) 谷 (や) 出 (いず) 久 (く) ")
         XCTAssertEqual(result?.occupation, "Student")

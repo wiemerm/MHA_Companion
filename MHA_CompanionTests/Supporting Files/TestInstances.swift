@@ -39,7 +39,7 @@ extension Character {
                   description: description,
                   fightstyle: fightstyle,
                   gender: gender,
-                  Eye: eye,
+                  eye: eye,
                   hair: hair,
                   kanji: kanji,
                   occupation: occupation,

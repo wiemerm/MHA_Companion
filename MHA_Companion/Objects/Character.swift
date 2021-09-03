@@ -17,7 +17,7 @@ struct Character: Codable, Identifiable {
     let description: String?
     let fightstyle: String?
     let gender: String?
-    let Eye: String?
+    let eye: String?
     let hair: String?
     let kanji: String?
     let occupation: String?
@@ -29,4 +29,29 @@ struct Character: Codable, Identifiable {
     let epithet: String?
     let ages: [Age]?
     let family: [FamilyMember]?
+
+    enum CodingKeys: String, CodingKey {
+        case id,
+             name,
+             alias,
+             affiliation,
+             birthday,
+             bloodtype,
+             description,
+             fightstyle,
+             gender,
+             eye = "Eye",
+             hair,
+             kanji,
+             occupation,
+             quirk,
+             romaji,
+             status,
+             teams,
+             images,
+             epithet,
+             ages,
+             family
+
+    }
 }
