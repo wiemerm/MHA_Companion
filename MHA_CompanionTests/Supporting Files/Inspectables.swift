@@ -9,5 +9,6 @@
 import Foundation
 import ViewInspector
 
+extension AvatarImage: Inspectable { }
 extension CharacterRow: Inspectable { }
 extension CharacterRowInfoView: Inspectable { }

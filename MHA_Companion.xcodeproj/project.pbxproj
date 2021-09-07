@@ -29,6 +29,9 @@
 		6336B15326E7D95A000616F7 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6336B15226E7D95A000616F7 /* ImageLoader.swift */; };
 		6336B15526E7D9E3000616F7 /* ImageLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6336B15426E7D9E3000616F7 /* ImageLoaderTests.swift */; };
 		63BBB90526E7E1D500DD8D68 /* MockCharacterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BBB90426E7E1D500DD8D68 /* MockCharacterService.swift */; };
+		63BBB90C26E7EBA100DD8D68 /* AvatarImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6336B14C26E7AF0A000616F7 /* AvatarImage.swift */; };
+		63BBB90D26E7EBB300DD8D68 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6336B14E26E7CA33000616F7 /* Constants.swift */; };
+		63BBB90E26E7F52800DD8D68 /* AvatarImageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6336B15026E7D804000616F7 /* AvatarImageTests.swift */; };
 		63CA4CFD26E122F200178A55 /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CA4CFC26E122F200178A55 /* TestHelpers.swift */; };
 		63CA4D0326E24D7900178A55 /* CharacterList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CA4D0226E24D7900178A55 /* CharacterList.swift */; };
 		63CA4D0526E24E5600178A55 /* CharacterRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CA4D0426E24E5600178A55 /* CharacterRow.swift */; };
@@ -77,6 +80,9 @@
 		631DFF0D26E00DAC00E88664 /* MyHeroAcademiaAPIIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyHeroAcademiaAPIIntegrationTests.swift; sourceTree = "<group>"; };
 		631DFF0F26E00E2100E88664 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 		631DFF1926E0149700E88664 /* CharacterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterService.swift; sourceTree = "<group>"; };
+		6336B14C26E7AF0A000616F7 /* AvatarImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarImage.swift; sourceTree = "<group>"; };
+		6336B14E26E7CA33000616F7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		6336B15026E7D804000616F7 /* AvatarImageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarImageTests.swift; sourceTree = "<group>"; };
 		6336B15226E7D95A000616F7 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ImageLoader.swift; path = ../../../../Documents/ImageLoader.swift; sourceTree = "<group>"; };
 		6336B15426E7D9E3000616F7 /* ImageLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoaderTests.swift; sourceTree = "<group>"; };
 		63BBB90426E7E1D500DD8D68 /* MockCharacterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCharacterService.swift; sourceTree = "<group>"; };
@@ -154,18 +160,19 @@
 		631DFECE26DFD46C00E88664 /* MHA_CompanionTests */ = {
 			isa = PBXGroup;
 			children = (
-				63BBB90326E7E17B00DD8D68 /* Mocks */,
 				631DFEFE26DFF30900E88664 /* AgeTests.swift */,
+				6336B15026E7D804000616F7 /* AvatarImageTests.swift */,
 				631DFF0726DFFB0D00E88664 /* CharacterEndpointTests.swift */,
 				63CA4D0B26E2547500178A55 /* CharacterRowInfoViewTests.swift */,
+				63CA4D0F26E2569D00178A55 /* CharacterRowTests.swift */,
 				631DFEF826DFD70200E88664 /* CharacterTests.swift */,
 				631DFF0026DFF31500E88664 /* FamilyMemberTests.swift */,
 				63CA4D1626E2745E00178A55 /* ImageEndpointTests.swift */,
 				6336B15426E7D9E3000616F7 /* ImageLoaderTests.swift */,
 				631DFF0D26E00DAC00E88664 /* MyHeroAcademiaAPIIntegrationTests.swift */,
 				631DFF0926E0017000E88664 /* ResultTests.swift */,
+				63BBB90326E7E17B00DD8D68 /* Mocks */,
 				631DFF1D26E014C000E88664 /* Supporting Files */,
-				63CA4D0F26E2569D00178A55 /* CharacterRowTests.swift */,
 			);
 			path = MHA_CompanionTests;
 			sourceTree = "<group>";
@@ -176,6 +183,7 @@
 				631DFEC126DFD46C00E88664 /* Assets.xcassets */,
 				631DFEC626DFD46C00E88664 /* Info.plist */,
 				631DFEBD26DFD46A00E88664 /* MHA_CompanionApp.swift */,
+				6336B14E26E7CA33000616F7 /* Constants.swift */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -183,10 +191,11 @@
 		631DFEE926DFD4F600E88664 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				631DFEBF26DFD46A00E88664 /* ContentView.swift */,
+				6336B14C26E7AF0A000616F7 /* AvatarImage.swift */,
 				63CA4D0226E24D7900178A55 /* CharacterList.swift */,
 				63CA4D0426E24E5600178A55 /* CharacterRow.swift */,
 				63CA4D0626E2531B00178A55 /* CharacterRowInfoView.swift */,
+				631DFEBF26DFD46A00E88664 /* ContentView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -383,6 +392,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				63CA4D1926E27B4900178A55 /* Endpoint.swift in Sources */,
+				63BBB90D26E7EBB300DD8D68 /* Constants.swift in Sources */,
 				63CA4D0526E24E5600178A55 /* CharacterRow.swift in Sources */,
 				63CA4D0726E2531B00178A55 /* CharacterRowInfoView.swift in Sources */,
 				631DFF0626DFF79E00E88664 /* CharacterEndpoint.swift in Sources */,
@@ -396,6 +406,7 @@
 				631DFEBE26DFD46A00E88664 /* MHA_CompanionApp.swift in Sources */,
 				63CA4D0326E24D7900178A55 /* CharacterList.swift in Sources */,
 				631DFF1A26E0149700E88664 /* CharacterService.swift in Sources */,
+				63BBB90C26E7EBA100DD8D68 /* AvatarImage.swift in Sources */,
 				631DFEFD26DFDFBD00E88664 /* FamilyMember.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -413,6 +424,7 @@
 				63CA4D1226E256FF00178A55 /* TestInstances.swift in Sources */,
 				63BBB90526E7E1D500DD8D68 /* MockCharacterService.swift in Sources */,
 				631DFF0826DFFB0D00E88664 /* CharacterEndpointTests.swift in Sources */,
+				63BBB90E26E7F52800DD8D68 /* AvatarImageTests.swift in Sources */,
 				63CA4D1726E2745E00178A55 /* ImageEndpointTests.swift in Sources */,
 				631DFF0126DFF31500E88664 /* FamilyMemberTests.swift in Sources */,
 				631DFF0E26E00DAC00E88664 /* MyHeroAcademiaAPIIntegrationTests.swift in Sources */,

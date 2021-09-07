@@ -17,7 +17,11 @@ class ImageLoaderTests: XCTestCase {
 
         let urlString = UUID().uuidString
         let mockService = MockCharacterService()
-        let imageLoader = ImageLoader(url: urlString, characterService: mockService)
+        let imageLoader = ImageLoader(characterService: mockService)
+
+        XCTAssertFalse(imageLoader.isLoading)
+
+        imageLoader.loadImage(from: urlString)
 
         imageLoader.$isLoading
             .sink { isLoading in
@@ -31,7 +35,9 @@ class ImageLoaderTests: XCTestCase {
 
     func testWhenUrlIsNil() {
         let mockService = MockCharacterService()
-        let imageLoader = ImageLoader(url: nil, characterService: mockService)
+        let imageLoader = ImageLoader(characterService: mockService)
+
+        imageLoader.loadImage(from: nil)
 
         XCTAssertFalse(imageLoader.isLoading)
         XCTAssertNil(imageLoader.data)
@@ -45,7 +51,11 @@ class ImageLoaderTests: XCTestCase {
         let urlString = UUID().uuidString
         let mockService = MockCharacterService()
         mockService.error = URLError(.badServerResponse)
-        let imageLoader = ImageLoader(url: urlString, characterService: mockService)
+        let imageLoader = ImageLoader(characterService: mockService)
+
+        XCTAssertFalse(imageLoader.isLoading)
+
+        imageLoader.loadImage(from: urlString)
 
         XCTAssertNil(imageLoader.data)
         XCTAssertEqual(mockService.fetchImageCallCount, 1)
@@ -70,7 +80,11 @@ class ImageLoaderTests: XCTestCase {
         let expectedData = Data()
         let mockService = MockCharacterService()
         mockService.imageData = expectedData
-        let imageLoader = ImageLoader(url: urlString, characterService: mockService)
+        let imageLoader = ImageLoader(characterService: mockService)
+
+        XCTAssertFalse(imageLoader.isLoading)
+
+        imageLoader.loadImage(from: urlString)
 
         XCTAssertEqual(mockService.fetchImageCallCount, 1)
         XCTAssertEqual(mockService.urlArg, urlString)

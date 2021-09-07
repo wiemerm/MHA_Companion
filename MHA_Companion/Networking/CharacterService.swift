@@ -8,8 +8,13 @@
 import Combine
 import Foundation
 
-struct CharacterService {
-    static func fetchCharacters(page: Int = 1) -> AnyPublisher<[Character], Error> {
+protocol CharacterServiceProtocol {
+    func fetchCharacters(page: Int) -> AnyPublisher<[Character], Error>
+    func fetchImage(at url: String) -> AnyPublisher<Data, URLError>
+}
+
+struct CharacterService: CharacterServiceProtocol {
+    func fetchCharacters(page: Int = 1) -> AnyPublisher<[Character], Error> {
         guard let request = RequestFactory.make(endpoint: CharacterEndpoint.page(page)) else {
             return Fail(error: URLError(.badURL))
                 .eraseToAnyPublisher()
@@ -21,7 +26,7 @@ struct CharacterService {
             .eraseToAnyPublisher()
     }
 
-    static func fetchImage(at url: String) -> AnyPublisher<Data, URLError> {
+    func fetchImage(at url: String) -> AnyPublisher<Data, URLError> {
         guard let request = RequestFactory.make(endpoint: ImageEndpoint.image(url: url)) else {
             return Fail(error: URLError(.badURL)).eraseToAnyPublisher()
         }
