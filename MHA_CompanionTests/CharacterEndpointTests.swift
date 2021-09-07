@@ -1,5 +1,5 @@
 //
-//  CharacterEndpointsTests.swift
+//  CharacterEndpointTests.swift
 //  MHA_CompanionTests
 //
 //  Created by Wiemer on 9/1/21.
@@ -8,7 +8,7 @@
 @testable import MHA_Companion
 import XCTest
 
-class CharacterEndpointsTests: XCTestCase {
+class CharacterEndpointTests: XCTestCase {
     func testCanBuildURL_allCase() {
         let url = CharacterEndpoint.all.url
         XCTAssertNotNil(url)
@@ -55,6 +55,5 @@ class CharacterEndpointsTests: XCTestCase {
         let url = CharacterEndpoint.filter(.affiliation, value: "U.A. High School").url
         XCTAssertNotNil(url)
         XCTAssertEqual(url?.absoluteString, "https://myheroacademiaapi.com/api/character?affiliation=U.A.%20High%20School")
-
     }
 }

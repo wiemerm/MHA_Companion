@@ -20,8 +20,8 @@
 		631DFEFD26DFDFBD00E88664 /* FamilyMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631DFEFC26DFDFBD00E88664 /* FamilyMember.swift */; };
 		631DFEFF26DFF30900E88664 /* AgeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631DFEFE26DFF30900E88664 /* AgeTests.swift */; };
 		631DFF0126DFF31500E88664 /* FamilyMemberTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631DFF0026DFF31500E88664 /* FamilyMemberTests.swift */; };
-		631DFF0626DFF79E00E88664 /* CharacterEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631DFF0526DFF79E00E88664 /* CharacterEndpoints.swift */; };
-		631DFF0826DFFB0D00E88664 /* CharacterEndpointsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631DFF0726DFFB0D00E88664 /* CharacterEndpointsTests.swift */; };
+		631DFF0626DFF79E00E88664 /* CharacterEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631DFF0526DFF79E00E88664 /* CharacterEndpoint.swift */; };
+		631DFF0826DFFB0D00E88664 /* CharacterEndpointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631DFF0726DFFB0D00E88664 /* CharacterEndpointTests.swift */; };
 		631DFF0A26E0017000E88664 /* ResultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631DFF0926E0017000E88664 /* ResultTests.swift */; };
 		631DFF0C26E0017B00E88664 /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631DFF0B26E0017B00E88664 /* Results.swift */; };
 		631DFF0E26E00DAC00E88664 /* MyHeroAcademiaAPIIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631DFF0D26E00DAC00E88664 /* MyHeroAcademiaAPIIntegrationTests.swift */; };
@@ -38,6 +38,7 @@
 		63CA4D0E26E254F200178A55 /* Inspectables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CA4D0D26E254F200178A55 /* Inspectables.swift */; };
 		63CA4D1026E2569D00178A55 /* CharacterRowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CA4D0F26E2569D00178A55 /* CharacterRowTests.swift */; };
 		63CA4D1226E256FF00178A55 /* TestInstances.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CA4D1126E256FF00178A55 /* TestInstances.swift */; };
+		63CA4D1926E27B4900178A55 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CA4D1826E27B4900178A55 /* Endpoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,8 +69,8 @@
 		631DFEFC26DFDFBD00E88664 /* FamilyMember.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyMember.swift; sourceTree = "<group>"; };
 		631DFEFE26DFF30900E88664 /* AgeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgeTests.swift; sourceTree = "<group>"; };
 		631DFF0026DFF31500E88664 /* FamilyMemberTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyMemberTests.swift; sourceTree = "<group>"; };
-		631DFF0526DFF79E00E88664 /* CharacterEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterEndpoints.swift; sourceTree = "<group>"; };
-		631DFF0726DFFB0D00E88664 /* CharacterEndpointsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterEndpointsTests.swift; sourceTree = "<group>"; };
+		631DFF0526DFF79E00E88664 /* CharacterEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterEndpoint.swift; sourceTree = "<group>"; };
+		631DFF0726DFFB0D00E88664 /* CharacterEndpointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterEndpointTests.swift; sourceTree = "<group>"; };
 		631DFF0926E0017000E88664 /* ResultTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTests.swift; sourceTree = "<group>"; };
 		631DFF0B26E0017B00E88664 /* Results.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Results.swift; sourceTree = "<group>"; };
 		631DFF0D26E00DAC00E88664 /* MyHeroAcademiaAPIIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyHeroAcademiaAPIIntegrationTests.swift; sourceTree = "<group>"; };
@@ -84,6 +85,7 @@
 		63CA4D0D26E254F200178A55 /* Inspectables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inspectables.swift; sourceTree = "<group>"; };
 		63CA4D0F26E2569D00178A55 /* CharacterRowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterRowTests.swift; sourceTree = "<group>"; };
 		63CA4D1126E256FF00178A55 /* TestInstances.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestInstances.swift; sourceTree = "<group>"; };
+		63CA4D1826E27B4900178A55 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,7 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				631DFEFE26DFF30900E88664 /* AgeTests.swift */,
-				631DFF0726DFFB0D00E88664 /* CharacterEndpointsTests.swift */,
+				631DFF0726DFFB0D00E88664 /* CharacterEndpointTests.swift */,
 				63CA4D0B26E2547500178A55 /* CharacterRowInfoViewTests.swift */,
 				631DFEF826DFD70200E88664 /* CharacterTests.swift */,
 				631DFEEB26DFD51D00E88664 /* CustomAssertions.swift */,
@@ -206,8 +208,9 @@
 			isa = PBXGroup;
 			children = (
 				631DFF0F26E00E2100E88664 /* ApiClient.swift */,
-				631DFF0526DFF79E00E88664 /* CharacterEndpoints.swift */,
+				631DFF0526DFF79E00E88664 /* CharacterEndpoint.swift */,
 				631DFF1926E0149700E88664 /* CharacterService.swift */,
+				63CA4D1826E27B4900178A55 /* Endpoint.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -375,9 +378,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63CA4D1926E27B4900178A55 /* Endpoint.swift in Sources */,
 				63CA4D0526E24E5600178A55 /* CharacterRow.swift in Sources */,
 				63CA4D0726E2531B00178A55 /* CharacterRowInfoView.swift in Sources */,
-				631DFF0626DFF79E00E88664 /* CharacterEndpoints.swift in Sources */,
+				631DFF0626DFF79E00E88664 /* CharacterEndpoint.swift in Sources */,
 				631DFEEE26DFD63D00E88664 /* Character.swift in Sources */,
 				631DFF1026E00E2100E88664 /* ApiClient.swift in Sources */,
 				631DFEFB26DFDFAC00E88664 /* Age.swift in Sources */,
@@ -400,7 +404,7 @@
 				63CA4D0C26E2547500178A55 /* CharacterRowInfoViewTests.swift in Sources */,
 				63CA4D0E26E254F200178A55 /* Inspectables.swift in Sources */,
 				63CA4D1226E256FF00178A55 /* TestInstances.swift in Sources */,
-				631DFF0826DFFB0D00E88664 /* CharacterEndpointsTests.swift in Sources */,
+				631DFF0826DFFB0D00E88664 /* CharacterEndpointTests.swift in Sources */,
 				631DFEEC26DFD51D00E88664 /* CustomAssertions.swift in Sources */,
 				631DFF0126DFF31500E88664 /* FamilyMemberTests.swift in Sources */,
 				631DFF0E26E00DAC00E88664 /* MyHeroAcademiaAPIIntegrationTests.swift in Sources */,

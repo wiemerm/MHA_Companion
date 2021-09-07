@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum CharacterEndpoint {
+enum CharacterEndpoint: Endpoint {
     case all
     case page(_ page: Int)
     case character(id: String)
