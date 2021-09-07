@@ -7,6 +7,7 @@
 
 @testable import MHA_Companion
 import Combine
+import SwiftUI
 import XCTest
 
 class MyHeroAcademiaAPIIntegrationTests: XCTestCase {
@@ -36,6 +37,19 @@ class MyHeroAcademiaAPIIntegrationTests: XCTestCase {
             .sink(receiveCompletion: { _ in }) { characters in
                 XCTAssertEqual(characters.count, 20)
                 XCTAssertEqual(characters.first?.id, "Hizashi_Yamada")
+                expect.fulfill()
+            }
+            .store(in: &disposeBag)
+
+        wait(for: [expect], timeout: TestHelpers.timeout)
+    }
+
+    func testFetchImage() {
+        let expect = expectation(description: "Waiting for API Response")
+        service.fetchImage(at: "https://storage.googleapis.com/my-hero-academia-api/Izuku_Midoriya-2.jpg")
+            .sink(receiveCompletion: { _ in }) { data in
+                let image = UIImage(data: data)
+                XCTAssertNotNil(image)
                 expect.fulfill()
             }
             .store(in: &disposeBag)
