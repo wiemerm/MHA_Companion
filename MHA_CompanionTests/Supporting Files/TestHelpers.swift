@@ -8,5 +8,5 @@
 import Foundation
 
 struct TestHelpers {
-    static let timeout: Double = 5
+    static let timeout: Double = 10
 }
