@@ -13,7 +13,7 @@ struct ProfileItemView: View {
 
     var body: some View {
         HStack(alignment: .top) {
-            Text("\(label):")
+            Text("\(label):").fontWeight(.semibold)
             Text(value ?? "unknown")
         }
     }

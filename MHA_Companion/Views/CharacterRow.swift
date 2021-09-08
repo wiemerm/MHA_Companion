@@ -13,7 +13,7 @@ struct CharacterRow: View {
 
     var body: some View {
         HStack(alignment: .top) {
-            AvatarImage(imageUrl: character.avatarUrl)
+            AvatarImage(imageUrl: character.avatarUrl, size: CGSize(width: 75, height: 75))
             .padding(.trailing, 16)
             VStack(alignment: .leading) {
                 Text(character.displayName)
