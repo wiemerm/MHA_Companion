@@ -9,12 +9,12 @@ import Combine
 import Foundation
 
 protocol CharacterServiceProtocol {
-    func fetchCharacters(page: Int) -> AnyPublisher<[Character], Error>
+    func fetchCharacters(page: Int) -> AnyPublisher<Results, Error>
     func fetchImage(at url: String) -> AnyPublisher<Data, URLError>
 }
 
 struct CharacterService: CharacterServiceProtocol {
-    func fetchCharacters(page: Int = 1) -> AnyPublisher<[Character], Error> {
+    func fetchCharacters(page: Int = 1) -> AnyPublisher<Results, Error> {
         guard let request = RequestFactory.make(endpoint: CharacterEndpoint.page(page)) else {
             return Fail(error: URLError(.badURL))
                 .eraseToAnyPublisher()
@@ -22,7 +22,6 @@ struct CharacterService: CharacterServiceProtocol {
 
         return ApiClient().send(request)
             .decode(type: Results.self, decoder: JSONDecoder())
-            .map { $0.results }
             .eraseToAnyPublisher()
     }
 

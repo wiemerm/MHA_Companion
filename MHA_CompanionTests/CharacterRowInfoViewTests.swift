@@ -5,6 +5,7 @@
 //  Created by Wiemer on 9/3/21.
 //
 @testable import MHA_Companion
+import SwiftUI
 import XCTest
 import ViewInspector
 

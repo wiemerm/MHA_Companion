@@ -21,7 +21,10 @@ class MyHeroAcademiaAPIIntegrationTests: XCTestCase {
     func testFetchCharactersFetchesFirstPageByDefault() {
         let expect = expectation(description: "Waiting for API Response")
         service.fetchCharacters()
-            .sink(receiveCompletion: { _ in }) { characters in
+            .sink(receiveCompletion: { _ in }) { results in
+                let characters = results.characters
+                XCTAssertEqual(results.currentPage, 1)
+                XCTAssertEqual(results.pages, 16)
                 XCTAssertEqual(characters.count, 20)
                 XCTAssertEqual(characters.first?.id, "Abegawa_Tenchu_Kai")
                 expect.fulfill()
@@ -34,7 +37,8 @@ class MyHeroAcademiaAPIIntegrationTests: XCTestCase {
     func testFetchCharacters_withSpecificPage() {
         let expect = expectation(description: "Waiting for API Response")
         service.fetchCharacters(page: 5)
-            .sink(receiveCompletion: { _ in }) { characters in
+            .sink(receiveCompletion: { _ in }) { results in
+                let characters = results.characters
                 XCTAssertEqual(characters.count, 20)
                 XCTAssertEqual(characters.first?.id, "Hizashi_Yamada")
                 expect.fulfill()

@@ -19,7 +19,7 @@ class MockCharacterService: CharacterServiceProtocol {
     private(set) var pageArg: Int?
     private(set) var urlArg: String?
 
-    func fetchCharacters(page: Int) -> AnyPublisher<[Character], Error> {
+    func fetchCharacters(page: Int) -> AnyPublisher<Results, Error> {
         fetchCharactersCallCount += 1
         pageArg = page
         if let error = error {
@@ -27,7 +27,7 @@ class MockCharacterService: CharacterServiceProtocol {
         }
 
         if let characters = charactersResponse {
-            return Result.Publisher(characters)
+            return Result.Publisher(Results.testInstance(characters: characters))
                 .eraseToAnyPublisher()
         }
 

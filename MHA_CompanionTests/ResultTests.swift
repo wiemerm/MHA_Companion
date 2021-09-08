@@ -15,8 +15,8 @@ class ResultTests: XCTestCase {
         XCTAssertEqual(result?.currentPage, 1)
         XCTAssertEqual(result?.count, 57)
         XCTAssertEqual(result?.pages, 3)
-        XCTAssertEqual(result?.results.count, 1)
-        XCTAssertEqual(result?.results[0].name, "Bibimi Kenranzaki")
+        XCTAssertEqual(result?.characters.count, 1)
+        XCTAssertEqual(result?.characters[0].name, "Bibimi Kenranzaki")
     }
 }
 

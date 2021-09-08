@@ -53,3 +53,15 @@ extension Character {
                   family: family)
     }
 }
+
+extension Results {
+    static func testInstance(currentPage: Int = 1,
+                             count: Int = 1,
+                             pages: Int = 1,
+                             characters: [Character] = []) -> Results {
+        Results(currentPage: currentPage,
+                count: count,
+                pages: pages,
+                characters: characters)
+    }
+}

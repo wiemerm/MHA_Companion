@@ -11,7 +11,7 @@ struct Results: Decodable {
     let currentPage: Int
     let count: Int
     let pages: Int
-    let results: [Character]
+    let characters: [Character]
 
     enum CodingKeys: String, CodingKey {
         case info, result
@@ -19,11 +19,18 @@ struct Results: Decodable {
 
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        results = try container.decode([Character].self, forKey: .result)
+        characters = try container.decode([Character].self, forKey: .result)
         let info = try container.decode(Info.self, forKey: .info)
         currentPage = info.currentPage
         count = info.count
         pages = info.pages
+    }
+
+    init(currentPage: Int, count: Int, pages: Int, characters: [Character]) {
+        self.currentPage = currentPage
+        self.count = count
+        self.pages = pages
+        self.characters = characters
     }
 
     private class Info: Codable {
