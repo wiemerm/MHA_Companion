@@ -16,7 +16,7 @@ struct CharacterRow: View {
             AvatarImage(imageUrl: character.avatarUrl)
             .padding(.trailing, 16)
             VStack(alignment: .leading) {
-                Text(character.name ?? character.id)
+                Text(character.displayName)
                     .foregroundColor(.yellowText)
                 Text(character.alias ?? "unknown")
                 CharacterRowInfoView(label: "Affiliation", value: character.affiliation)

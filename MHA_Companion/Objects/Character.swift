@@ -32,6 +32,7 @@ struct Character: Codable, Identifiable, Equatable {
     var avatarUrl: String? {
         images.first(where: { $0.contains("\(id).jpg") })
     }
+    var displayName: String { name ?? id.replacingOccurrences(of: "_", with: " ")}
 
     enum CodingKeys: String, CodingKey {
         case id,
