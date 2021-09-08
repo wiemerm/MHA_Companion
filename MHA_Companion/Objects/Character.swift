@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Character: Codable, Identifiable {
+struct Character: Codable, Identifiable, Equatable {
     let id: String
     let name: String?
     let alias: String?
@@ -29,6 +29,9 @@ struct Character: Codable, Identifiable {
     let epithet: String?
     let ages: [Age]?
     let family: [FamilyMember]?
+    var avatarUrl: String? {
+        images.first(where: { $0.contains("\(id).jpg") })
+    }
 
     enum CodingKeys: String, CodingKey {
         case id,

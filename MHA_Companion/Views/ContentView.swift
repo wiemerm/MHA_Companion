@@ -8,9 +8,24 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var viewModel = CharactersViewModel()
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView {
+            CharacterList(characters: viewModel.state.characters, isLoading: viewModel.state.canLoad) {
+                viewModel.fetchCharacters()
+            }
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .principal) {
+                    Image("mha_logo")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(height: 50)
+                        .padding(.bottom)
+                }
+            }
+            .onAppear { viewModel.fetchCharacters() }
+        }
     }
 }
 

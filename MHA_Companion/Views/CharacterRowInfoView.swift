@@ -14,7 +14,10 @@ struct CharacterRowInfoView: View {
     var body: some View {
         HStack {
             Text("\(label):")
+                .font(.system(size: 12))
             Text(value ?? "unknown")
+                .foregroundColor(.yellowText)
+                .font(.system(size: 12))
         }
     }
 }

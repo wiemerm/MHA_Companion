@@ -12,9 +12,9 @@ struct AvatarImage: View {
     @StateObject private var imageLoader: ImageLoader
     private let imageUrl: String?
 
-    init(character: Character, imageLoader: ImageLoader = ImageLoader()) {
+    init(imageUrl: String?, imageLoader: ImageLoader = ImageLoader()) {
         _imageLoader = StateObject(wrappedValue: imageLoader)
-        imageUrl = character.images.first(where: { $0.contains("\(character.id).jpg") })
+        self.imageUrl = imageUrl
     }
 
     var body: some View {
@@ -47,26 +47,6 @@ struct AvatarImage: View {
 
 struct AvatarImage_Previews: PreviewProvider {
     static var previews: some View {
-        AvatarImage(character: Character(id: "",
-                                         name: nil,
-                                         alias: nil,
-                                         affiliation: nil,
-                                         birthday: nil,
-                                         bloodtype: nil,
-                                         description: nil,
-                                         fightstyle: nil,
-                                         gender: nil,
-                                         eye: nil,
-                                         hair: nil,
-                                         kanji: nil,
-                                         occupation: nil,
-                                         quirk: nil,
-                                         romaji: nil,
-                                         status: nil,
-                                         teams: nil,
-                                         images: [],
-                                         epithet: nil,
-                                         ages: nil,
-                                         family: nil))
+        AvatarImage(imageUrl: nil)
     }
 }

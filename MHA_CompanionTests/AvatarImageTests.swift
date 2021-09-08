@@ -12,9 +12,9 @@ import ViewInspector
 
 class AvatarImageTests: XCTestCase {
     func testInitialState() {
-        let character = Character.testInstance(id: "Izuku_Midoriya", images: ["https://storage.googleapis.com/my-hero-academia-api/Izuku_Midoriya.jpg"])
+        let urlString = "https://storage.googleapis.com/my-hero-academia-api/Izuku_Midoriya.jpg"
         let mockImageLoader = MockImageLoader()
-        let sut = AvatarImage(character: character, imageLoader: mockImageLoader)
+        let sut = AvatarImage(imageUrl: urlString, imageLoader: mockImageLoader)
         let expectedImage = Image(systemName: Strings.placeholderAvatar).accessibility(identifier: "placeholder avatar")
 
         XCTAssertNoThrow(try sut.inspect().find(ViewType.Image.self))
@@ -24,10 +24,10 @@ class AvatarImageTests: XCTestCase {
     }
 
     func testLoadingState() {
-        let character = Character.testInstance(id: "Izuku_Midoriya", images: ["https://storage.googleapis.com/my-hero-academia-api/Izuku_Midoriya.jpg"])
+        let urlString = "https://storage.googleapis.com/my-hero-academia-api/Izuku_Midoriya.jpg"
         let mockImageLoader = MockImageLoader()
         mockImageLoader.isLoading = true
-        let sut = AvatarImage(character: character, imageLoader: mockImageLoader)
+        let sut = AvatarImage(imageUrl: urlString, imageLoader: mockImageLoader)
 
         XCTAssertNoThrow(try sut.inspect().find(ViewType.ProgressView.self))
     }
