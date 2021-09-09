@@ -37,7 +37,7 @@ class CharacterRowTests: XCTestCase {
         let inspection = try sut.inspect()
 
         XCTAssertNoThrow(try inspection.find(ViewType.HStack.self))
-        XCTAssertNoThrow(try inspection.find(text: character.id))
+        XCTAssertNoThrow(try inspection.find(text: character.id.replacingOccurrences(of: "_", with: " ")))
         XCTAssertEqual(inspection.findAll(ViewType.Text.self) { try $0.string() == "unknown" }.count, 4)
         XCTAssertNoThrow(try inspection.find(ViewType.Image.self))
     }

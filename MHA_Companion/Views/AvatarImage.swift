@@ -13,7 +13,7 @@ struct AvatarImage: View {
     @StateObject private var imageLoader: ImageLoader
     private let imageUrl: String?
 
-    init(imageUrl: String?, size: CGSize, imageLoader: ImageLoader = ImageLoader()) {
+    init(imageUrl: String?, size: CGSize = CGSize(width: 75, height: 75), imageLoader: ImageLoader = ImageLoader()) {
         _imageLoader = StateObject(wrappedValue: imageLoader)
         self.imageUrl = imageUrl
         self.size = size
@@ -23,7 +23,7 @@ struct AvatarImage: View {
         ZStack {
             if imageLoader.isLoading {
                 ProgressView()
-                    .frame(width: Constants.imageSize, height: Constants.imageSize)
+                    .frame(width: size.width, height: size.height)
             } else if let data = imageLoader.data,
                       let image = UIImage(data: data) {
                 Image(uiImage: image)

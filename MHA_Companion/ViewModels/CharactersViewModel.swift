@@ -11,8 +11,12 @@ import Foundation
 class CharactersViewModel: ObservableObject {
     @Published var state = State()
 
-    private let characterService = CharacterService()
+    private let characterService: CharacterServiceProtocol
     private var disposeBag = Set<AnyCancellable>()
+
+    init(characterService: CharacterServiceProtocol = CharacterService()) {
+        self.characterService = characterService
+    }
 
     func fetchCharacters() {
         guard state.canLoad else { return }
@@ -31,7 +35,6 @@ class CharactersViewModel: ObservableObject {
                 _self.state.characters.append(contentsOf: results.characters)
             }
             .store(in: &disposeBag)
-
     }
 
     struct State {

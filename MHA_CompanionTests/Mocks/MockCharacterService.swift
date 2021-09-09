@@ -27,7 +27,7 @@ class MockCharacterService: CharacterServiceProtocol {
         }
 
         if let characters = charactersResponse {
-            return Result.Publisher(Results.testInstance(characters: characters))
+            return Result.Publisher(Results.testInstance(pages: 5, characters: characters))
                 .eraseToAnyPublisher()
         }
 

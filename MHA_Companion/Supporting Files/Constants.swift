@@ -9,7 +9,6 @@ import Foundation
 import SwiftUI
 
 struct Constants {
-    static let imageSize: CGFloat = 75
     static let cornerRadius: CGFloat = 10
 }
 

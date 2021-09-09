@@ -14,7 +14,6 @@ struct CharacterProfileView: View {
         ScrollView {
             VStack(alignment: .leading) {
                 HStack(alignment: .top) {
-//                    Image("deku")
                     AvatarImage(imageUrl: character.avatarUrl, size: CGSize(width: 125, height: 125))
                     VStack(alignment: .leading) {
                         Text(character.displayName)
