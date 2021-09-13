@@ -13,3 +13,4 @@ extension AvatarImage: Inspectable { }
 extension CharacterProfileView: Inspectable { }
 extension CharacterRow: Inspectable { }
 extension CharacterRowInfoView: Inspectable { }
+extension ProfileItemView: Inspectable { }

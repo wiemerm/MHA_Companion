@@ -58,6 +58,7 @@ struct CharacterProfileView: View {
 
                 Text(character.description ?? "No description available")
                     .padding()
+                    .font(.body)
                 Spacer()
             }
         }
