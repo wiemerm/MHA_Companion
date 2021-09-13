@@ -179,6 +179,7 @@
 				63ED9BA526E90B9C00C00101 /* CharacterProfileViewTests.swift */,
 				63CA4D0B26E2547500178A55 /* CharacterRowInfoViewTests.swift */,
 				63CA4D0F26E2569D00178A55 /* CharacterRowTests.swift */,
+				6395DB7F26EA94E700A8762F /* CharactersViewModelTests.swift */,
 				631DFEF826DFD70200E88664 /* CharacterTests.swift */,
 				631DFF0026DFF31500E88664 /* FamilyMemberTests.swift */,
 				63CA4D1626E2745E00178A55 /* ImageEndpointTests.swift */,
@@ -187,7 +188,6 @@
 				631DFF0926E0017000E88664 /* ResultTests.swift */,
 				63BBB90326E7E17B00DD8D68 /* Mocks */,
 				631DFF1D26E014C000E88664 /* Supporting Files */,
-				6395DB7F26EA94E700A8762F /* CharactersViewModelTests.swift */,
 			);
 			path = MHA_CompanionTests;
 			sourceTree = "<group>";
