@@ -76,6 +76,7 @@ class CharacterProfileViewTests: XCTestCase {
         let quirkParent = try? characterView?.find(ProfileItemView.self, containing: character.quirk!).parent().vStack()
         XCTAssertEqual(try? quirkParent?.alignment(), HorizontalAlignment.leading)
         XCTAssertEqual(try? quirkParent?.flexFrame().maxWidth, .infinity)
+        XCTAssertEqual(try? quirkParent?.background().foregroundColor(), Color.blue)
 
         let description = try? characterView?.find(text: character.description!)
         XCTAssertEqual(try? description?.attributes().font(), Font.body)

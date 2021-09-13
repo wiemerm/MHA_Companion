@@ -55,6 +55,8 @@ struct CharacterProfileView: View {
                     }
                 }
                 .frame(maxWidth: .infinity)
+                .padding()
+                .background(RoundedRectangle(cornerRadius: 15).foregroundColor(.blue))
 
                 Text(character.description ?? "No description available")
                     .padding()
